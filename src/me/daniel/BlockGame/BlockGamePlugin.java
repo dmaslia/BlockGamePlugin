@@ -15,7 +15,6 @@ public class BlockGamePlugin extends JavaPlugin{
 	public void onEnable(){
 		
 		plugin = this;
-		getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "\n\nTutorial has been enabled!\n\n");
 		this.getCommand("startgame").setExecutor(new Commands());
 		this.getCommand("skip").setExecutor(new Commands());
 		getServer().getPluginManager().registerEvents(new EventsClass(), this);
@@ -25,7 +24,6 @@ public class BlockGamePlugin extends JavaPlugin{
 	@Override
 	public void onDisable() {
 		Timer.removeAll();
-		getServer().getConsoleSender().sendMessage(ChatColor.RED + "\n\nTutorial has been disabled!\n\n");
 		
 	}
 	
